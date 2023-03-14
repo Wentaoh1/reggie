@@ -19,5 +19,5 @@ mybatis-plus:
       id-type: ASSIGN_ID
   mapper-locations: classpath:mapper/*.xml
 reggie:
-#  path: E:\img\
-  path: /img/
+  path: E:\img\
+#  path: /img/
