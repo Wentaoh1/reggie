@@ -50,7 +50,8 @@ public class DishController {
         log.info(dishDto.toString());
 
         dishService.saveWithFlavor(dishDto);
-
+        String keys="dish_"+dishDto.getCategoryId()+"_1";
+        redisTemplate.delete(keys);
         return R.success("新增菜品成功");
     }
 
@@ -130,7 +131,7 @@ public class DishController {
 
 //        Set keys=redisTemplate.keys("dish_*");
 //        redisTemplate.delete(keys);
-        
+
         String keys="dish_"+dishDto.getCategoryId()+"_1";
         redisTemplate.delete(keys);
         return R.success("新增菜品成功");
